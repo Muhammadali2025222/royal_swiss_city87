@@ -114,6 +114,3 @@ client/public/__manus__/version.json
 
 # Large zip archives
 *.zip
-
-# Local backups
-client/public/backup_logos/
