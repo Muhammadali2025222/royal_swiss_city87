@@ -27,7 +27,7 @@ export default function FloatingContacts() {
       id: "email",
       icon: Mail,
       label: "Email",
-      href: "mailto:info@royalswisscity.com",
+      href: "mailto:royalswisscity@gmail.com",
       bgColor: "bg-red-600",
       hoverColor: "hover:bg-red-700",
       external: false,

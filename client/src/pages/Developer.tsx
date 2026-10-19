@@ -141,7 +141,7 @@ export default function Developer() {
       </div>
     </section>
 
-    <section className="legacy-quotes-section reveal-section" style={{ background: "#ffffff", backgroundColor: "#ffffff", marginTop: "-5vh", paddingBottom: "60px" }}>
+    <section className="legacy-quotes-section reveal-section" style={{ background: "#F7F7F7", backgroundColor: "#F7F7F7", marginTop: "-5vh", paddingBottom: "60px" }}>
         {/* Section Header */}
         <div className="legacy-section-header">
           <div className="header-title">

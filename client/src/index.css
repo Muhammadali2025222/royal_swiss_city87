@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
 :root {
-    font-family: "DM Sans", Arial, sans-serif;
+    font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     color: #171717;
-    background: #f4f4f4;
-    --serif: "Cormorant Garamond", Georgia, serif;
+    background: #F7F7F7;
+    --serif: "Manrope", sans-serif;
+    --sans: "Manrope", sans-serif;
+    --font-manrope: "Manrope", sans-serif;
     --ink: #171717;
     --muted: #666;
     --line: #d0d0d0;
@@ -28,7 +31,7 @@ html::-webkit-scrollbar {
 
 body {
     margin: 0;
-    background: #f4f4f4;
+    background: #F7F7F7;
     color: var(--ink);
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -82,34 +85,23 @@ a {
     z-index: 20
 }
 
-/* Hide navbar only on home page desktop during hero */
+/* Hide navbar initially on desktop until scrolled */
 @media(min-width:761px) {
-    .home-page .walk-header {
+    .home-page .walk-header,
+    .the-city-page .walk-header,
+    .faq-page .walk-header,
+    .developer-page .walk-header,
+    .enquire-page .walk-header {
         opacity: 0;
         pointer-events: none;
+        transition: opacity .45s ease;
     }
     
-    .home-page .walk-header.is-scrolled {
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .the-city-page .walk-header {
-        opacity: 0;
-        pointer-events: none;
-    }
-    
-    .the-city-page .walk-header.is-scrolled {
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .faq-page .walk-header {
-        opacity: 0;
-        pointer-events: none;
-    }
-    
-    .faq-page .walk-header.is-scrolled {
+    .home-page .walk-header.is-scrolled,
+    .the-city-page .walk-header.is-scrolled,
+    .faq-page .walk-header.is-scrolled,
+    .developer-page .walk-header.is-scrolled,
+    .enquire-page .walk-header.is-scrolled {
         opacity: 1;
         pointer-events: auto;
     }
@@ -290,43 +282,199 @@ a {
     }
 }
 
-.section-kicker {
-    font-size: 12px;
-    letter-spacing: .23em;
-    margin: 0px 0 10px 0px;
-    text-transform: uppercase;
-    color: rgba(150, 148, 148, 0.797);
-    background-color: #57545400;
+/* ==========================================================================
+   GLOBAL TYPOGRAPHY - MANROPE SYSTEM
+   ========================================================================== */
+
+body, button, input, select, textarea {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Section Labels (Mobile: 20-22px, Desktop: 26-28px, Uppercase, Wide Tracking, Medium/Semibold) */
+.section-kicker,
+.hero-kicker,
+.section-label,
+.kicker,
+.legacy-copy .section-kicker,
+.projects-header .section-kicker,
+.partner-strip .section-kicker,
+.leadership-heading .section-kicker {
+    font-family: 'Manrope', sans-serif !important;
+    font-size: clamp(26px, 1.8vw, 28px) !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    margin: 0px 0 12px 0px;
+    line-height: 1.25 !important;
+    display: inline-block;
 }
 
 .hero-kicker {
-    font-size: 12px;
-    letter-spacing: .23em;
-    margin: 0px 0 10px 0px;
-    text-transform: uppercase;
     color: rgb(254, 252, 252);
-    background-color: #57545400;
+    background-color: transparent;
+}
+
+.section-kicker {
+    color: rgba(150, 148, 148, 0.797);
+    background-color: transparent;
+}
+
+/* Main Headings (Mobile: 30-34px, Desktop: 42-48px, Bold/Extra Bold, Uppercase or Title Case) */
+h1,
+h2:not(.hero-capsule-heading):not(.the-city-hero-title),
+.main-heading,
+.section-title,
+.hero-copy h1,
+.vision-copy h2,
+.developer-copy h2,
+.leadership-heading h2,
+.masterplan-copy h2,
+.features-section > h2,
+.sustainability-copy h2,
+.enquire-section h2,
+.partner-strip h2 {
+    font-family: 'Manrope', sans-serif !important;
+    font-size: clamp(42px, 3.2vw, 48px) !important;
+    font-weight: 700 !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.01em;
+}
+
+.the-city-hero-kicker {
+    font-family: 'Manrope', sans-serif !important;
+    font-size: clamp(18px, 1.4vw, 22px) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.14em !important;
+    color: #b2996a !important;
+    text-transform: uppercase !important;
+    display: block !important;
+    margin-bottom: 16px !important;
+}
+
+.the-city-hero-title {
+    font-family: 'Manrope', sans-serif !important;
+    font-size: clamp(60px, 5.2vw, 82px) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.04em !important;
+    line-height: 1.05 !important;
+    margin: 0 !important;
+}
+
+.hero-capsule-heading,
+.hero-capsule-heading span,
+.footer-contact b {
+    font-family: "Cormorant Garamond", Georgia, serif !important;
 }
 
 .hero-copy h1 {
-    font-family: var(--serif);
-    font-size: 56px;
-    font-weight: inherit;
-    letter-spacing: .08em;
-    line-height: .90;
-    margin: 0 0 10px;
-    font-style: bold;
-    color: rgb(248, 218, 162);
+    margin: 0 0 14px;
+    color: rgb(248, 218, 162) !important;
 }
 
 .hero-copy h1 span {
-    color: rgb(248, 218, 162);
+    color: rgb(248, 218, 162) !important;
 }
 
-.hero-copy p {
-    font-size: 15px;
+/* Subheadings (Mobile: 22-24px, Desktop: 28-32px, Medium to Semi-bold) */
+h3,
+h4,
+h5,
+h6,
+.subheading,
+.card-title,
+.feature-title,
+.spec-item h3 {
+    font-family: 'Manrope', sans-serif !important;
+    font-size: clamp(28px, 2.2vw, 32px) !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+}
+
+/* Body Text (Mobile: 18-19px, Desktop: 20-21px, Regular/Light-Regular, High Line Height) */
+p,
+.body-text,
+.detail-card p,
+.hero-copy p,
+.vision-copy p:not(.section-kicker),
+.developer-copy > p:not(.section-kicker),
+.masterplan-copy > p:not(.section-kicker),
+.sustainability-copy > p:not(.section-kicker),
+.partner-strip > div > p:not(.section-kicker),
+.leadership-heading > p:not(.section-kicker),
+.showcase-heading > p:not(.section-kicker) {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(20px, 1.4vw, 21px);
+    font-weight: 300;
     line-height: 1.7;
-    margin: 0 0 10px
+    margin: 0 0 16px;
+}
+
+@media (max-width: 768px) {
+    .section-kicker,
+    .hero-kicker,
+    .section-label,
+    .kicker,
+    .legacy-copy .section-kicker,
+    .projects-header .section-kicker,
+    .partner-strip .section-kicker,
+    .leadership-heading .section-kicker {
+        font-size: clamp(20px, 4.5vw, 22px) !important;
+        letter-spacing: 0.15em !important;
+    }
+
+    .the-city-hero-kicker {
+        font-size: clamp(14px, 3.8vw, 17px) !important;
+        margin-bottom: 12px !important;
+    }
+
+    .the-city-hero-title {
+        font-size: clamp(38px, 9vw, 54px) !important;
+        line-height: 1.1 !important;
+    }
+
+    h1,
+    h2:not(.hero-capsule-heading):not(.the-city-hero-title),
+    .main-heading,
+    .section-title,
+    .hero-copy h1,
+    .vision-copy h2,
+    .developer-copy h2,
+    .leadership-heading h2,
+    .masterplan-copy h2,
+    .features-section > h2,
+    .sustainability-copy h2,
+    .enquire-section h2,
+    .partner-strip h2 {
+        font-size: clamp(30px, 5.5vw, 34px) !important;
+        line-height: 1.2 !important;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6,
+    .subheading,
+    .card-title,
+    .feature-title,
+    .spec-item h3 {
+        font-size: clamp(22px, 4vw, 24px) !important;
+        line-height: 1.3 !important;
+    }
+
+    p,
+    .body-text,
+    .detail-card p,
+    .hero-copy p,
+    .vision-copy p:not(.section-kicker),
+    .developer-copy > p:not(.section-kicker),
+    .masterplan-copy > p:not(.section-kicker),
+    .sustainability-copy > p:not(.section-kicker),
+    .partner-strip > div > p:not(.section-kicker),
+    .leadership-heading > p:not(.section-kicker),
+    .showcase-heading > p:not(.section-kicker) {
+        font-size: clamp(18px, 3.5vw, 19px) !important;
+        line-height: 1.65 !important;
+    }
 }
 
 .hero-copy a,
@@ -406,17 +554,18 @@ a {
 }
 
 .detail-card__copy h2 {
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    letter-spacing: -.035em;
-    line-height: .9;
-    margin: 0 0 38px
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(28px, 2.2vw, 32px);
+    letter-spacing: -.02em;
+    line-height: 1.2;
+    margin: 0 0 24px;
+    font-weight: 700;
 }
 
 .detail-card__copy h2 em {
-    font-family: var(--serif);
-    font-size: 26px;
-    font-weight: 500
+    font-family: 'Manrope', sans-serif;
+    font-size: inherit;
+    font-weight: 600;
 }
 
 .detail-card__copy p {
@@ -1038,8 +1187,6 @@ a {
         font-size: 12px;
         color: #b2996a;
         transform: translateY(-2px);
-        font-style: italic;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     .walk-hero {
@@ -1771,10 +1918,10 @@ a {
 
 .stat-line small {
     display: block;
-    font-family: "DM Sans", sans-serif;
-    font-size: 8px;
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
     letter-spacing: .14em;
-    margin-top: 6px
+    margin-top: 6px;
 }
 
 .legacy-section {
@@ -3182,10 +3329,10 @@ a {
 }
 
 .legacy-num-60 {
-    font-family: "Cormorant Garamond", Georgia, serif !important;
-    font-style: italic !important;
+    font-family: "Manrope", sans-serif !important;
+    font-style: normal !important;
     font-size: clamp(90px, 11vw, 165px) !important;
-    font-weight: 700 !important;
+    font-weight: 800 !important;
     background: linear-gradient(135deg, #7A4E12 0%, #B88534 22%, #DFB460 42%, #BA8936 58%, #6E440E 78%, #A87928 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
@@ -3201,7 +3348,7 @@ a {
 }
 
 .legacy-plus-sign {
-    font-family: "Cormorant Garamond", Georgia, serif !important;
+    font-family: "Manrope", sans-serif !important;
     font-size: clamp(38px, 4.6vw, 68px) !important;
     font-weight: 700 !important;
     background: linear-gradient(135deg, #7A4E12 0%, #B88534 22%, #DFB460 42%, #BA8936 58%, #6E440E 78%, #A87928 100%) !important;
@@ -3217,7 +3364,7 @@ a {
 }
 
 .legacy-label-years {
-    font-family: "Cinzel", "Cormorant Garamond", Georgia, serif !important;
+    font-family: "Manrope", sans-serif !important;
     font-size: clamp(14px, 1.6vw, 24px) !important;
     font-weight: 600 !important;
     color: #9F733E !important;
@@ -3231,7 +3378,7 @@ a {
 }
 
 .legacy-label-legacy {
-    font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif !important;
+    font-family: "Manrope", sans-serif !important;
     font-size: clamp(34px, 4.2vw, 62px) !important;
     font-weight: 800 !important;
     color: #0E2A47 !important;
@@ -3254,7 +3401,7 @@ a {
 }
 
 .legacy-tagline {
-    font-family: "Cormorant Garamond", "Cinzel", Georgia, serif !important;
+    font-family: "Manrope", sans-serif !important;
     font-size: clamp(9.5px, 0.95vw, 13.5px) !important;
     font-weight: 600 !important;
     color: #132B45 !important;
@@ -3778,27 +3925,237 @@ a {
 }
 
 .modal-type {
-    font-size: 11px;
-    letter-spacing: .15em;
-    color: #b2996a;
-    margin: 0 0 12px;
-    text-transform: uppercase;
-    font-weight: 600
+    font-size: 11px !important;
+    letter-spacing: .15em !important;
+    color: #b2996a !important;
+    margin: 0 0 10px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
 }
 
 .modal-location {
-    font-size: 12px;
-    letter-spacing: .1em;
-    color: #888;
-    margin: 0 0 20px;
-    text-transform: uppercase
+    font-size: 12px !important;
+    letter-spacing: .1em !important;
+    color: #888 !important;
+    margin: 0 0 16px !important;
+    text-transform: uppercase !important;
+    line-height: 1.3 !important;
 }
 
 .modal-description {
-    font-size: 14px;
-    line-height: 1.8;
-    color: #555;
-    margin: 0
+    font-size: 13.5px !important;
+    line-height: 1.7 !important;
+    color: #555 !important;
+    margin: 0 !important;
+}
+
+/* ==========================================================================
+   Authorized Dealers & Sales Partners Section Styles
+   ========================================================================== */
+
+.partner-section-subtitle {
+    font-family: var(--sans, 'Manrope', sans-serif) !important;
+    font-weight: 600 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    color: #1a3a52 !important;
+    text-align: center !important;
+    margin: 0 0 28px 0 !important;
+}
+
+.partner-cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 18px !important;
+    margin-bottom: 40px !important;
+    width: 100% !important;
+}
+
+.partner-card {
+    background: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    padding: 20px 14px 18px !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(26, 58, 82, 0.16) !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    min-height: 200px !important;
+    box-shadow: 0 2px 10px rgba(26, 58, 82, 0.04) !important;
+    box-sizing: border-box !important;
+}
+
+.partner-card:hover {
+    box-shadow: 0 10px 24px rgba(26, 58, 82, 0.14) !important;
+    transform: translateY(-4px) !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    border-color: rgba(26, 58, 82, 0.3) !important;
+}
+
+.partner-card-logo-wrap {
+    width: 60px !important;
+    height: 60px !important;
+    background: #ffffff !important;
+    border-radius: 8px !important;
+    margin: 0 auto 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    padding: 5px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid rgba(26, 58, 82, 0.1) !important;
+    flex-shrink: 0 !important;
+}
+
+.partner-card-logo-wrap img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+.partner-card-info {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 2px 0 6px 0 !important;
+}
+
+.partner-card-name {
+    font-family: var(--sans, 'Manrope', sans-serif) !important;
+    font-size: 11.5px !important;
+    font-weight: 700 !important;
+    color: #1a3a52 !important;
+    margin: 0 0 5px 0 !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    letter-spacing: 0.2px !important;
+    word-break: break-word !important;
+}
+
+.partner-card-type {
+    font-family: var(--sans, 'Manrope', sans-serif) !important;
+    font-size: 8.5px !important;
+    font-weight: 600 !important;
+    color: #6b7a8c !important;
+    margin: 0 0 6px 0 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
+}
+
+.partner-card-badge {
+    font-family: var(--sans, 'Manrope', sans-serif) !important;
+    font-size: 7.5px !important;
+    font-weight: 700 !important;
+    color: #8f6f32 !important;
+    background: rgba(143, 111, 50, 0.08) !important;
+    border: 1px solid rgba(143, 111, 50, 0.2) !important;
+    border-radius: 999px !important;
+    padding: 4px 10px !important;
+    letter-spacing: 0.7px !important;
+    text-transform: uppercase !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    transition: all 0.2s ease !important;
+    flex-shrink: 0 !important;
+}
+
+.partner-card:hover .partner-card-badge {
+    background: rgba(143, 111, 50, 0.16) !important;
+    border-color: rgba(143, 111, 50, 0.4) !important;
+}
+
+/* Mobile adjustments for partner cards */
+@media (max-width: 768px) {
+    .partner-section-subtitle {
+        font-size: 13px !important;
+        letter-spacing: 1.5px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .partner-cards-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .partner-card {
+        padding: 12px 8px 10px !important;
+        min-height: 160px !important;
+        border-radius: 10px !important;
+    }
+
+    .partner-card-logo-wrap {
+        width: 44px !important;
+        height: 44px !important;
+        margin: 0 auto 6px !important;
+        padding: 3px !important;
+        border-radius: 6px !important;
+    }
+
+    .partner-card-name {
+        font-size: 10px !important;
+        font-weight: 700 !important;
+        line-height: 1.2 !important;
+        margin: 0 0 3px 0 !important;
+    }
+
+    .partner-card-type {
+        font-size: 7.5px !important;
+        letter-spacing: 0.3px !important;
+        margin: 0 0 6px 0 !important;
+    }
+
+    .partner-card-badge {
+        font-size: 6.8px !important;
+        padding: 3px 8px !important;
+        letter-spacing: 0.5px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .partner-cards-grid {
+        gap: 8px !important;
+    }
+
+    .partner-card {
+        padding: 10px 6px 8px !important;
+        min-height: 150px !important;
+    }
+
+    .partner-card-logo-wrap {
+        width: 38px !important;
+        height: 38px !important;
+    }
+
+    .partner-card-name {
+        font-size: 9px !important;
+    }
+
+    .partner-card-type {
+        font-size: 7px !important;
+    }
+
+    .partner-card-badge {
+        font-size: 6.5px !important;
+        padding: 2.5px 6px !important;
+    }
 }
 
 @media(max-width:760px) {
@@ -5102,46 +5459,50 @@ a {
 .dealer-modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.65);
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 100;
-    backdrop-filter: blur(5px);
+    z-index: 1000;
+    backdrop-filter: blur(6px);
 }
 
 .dealer-modal {
-    background: rgba(100, 150, 200, 0.25);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(212, 184, 150, 0.4);
+    background: #f7f7f9;
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(143, 111, 50, 0.3);
     border-radius: 16px;
-    padding: 32px;
+    padding: 36px 30px;
     max-width: 500px;
     width: 90%;
     position: relative;
     max-height: 90vh;
     overflow-y: auto;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
 }
 
 .modal-close {
     position: absolute;
     top: 16px;
     right: 16px;
-    background: none;
+    background: rgba(0, 0, 0, 0.05);
     border: none;
-    border-radius: 8px;
-    padding: 8px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 0;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #d4b896;
+    color: #8f6f32;
     transition: all 0.3s ease;
 }
 
 .modal-close:hover {
-    background: none;
-    transform: scale(1.1);
+    background: rgba(0, 0, 0, 0.1);
+    color: #725624;
+    transform: scale(1.05);
 }
 
 .modal-content {
@@ -5149,30 +5510,32 @@ a {
 }
 
 .modal-content h2 {
-    color: #d4b896;
-    font-size: 24px;
-    font-weight: 600;
+    color: #8f6f32;
+    font-size: 22px;
+    font-weight: 700;
     margin: 16px 0 8px 0;
 }
 
 .modal-type {
-    color: #d4b896;
-    font-size: 12px;
+    color: #8f6f32;
+    font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 0 0 8px 0;
+    letter-spacing: 1.5px;
+    margin: 0 0 6px 0;
+    font-weight: 600;
 }
 
 .modal-location {
-    color: #d4b896;
+    color: #6b7280;
     font-size: 12px;
+    letter-spacing: 0.5px;
     margin: 0 0 16px 0;
 }
 
 .modal-description {
-    color: #d4b896;
-    font-size: 13px;
-    line-height: 1.6;
+    color: #374151;
+    font-size: 13.5px;
+    line-height: 1.7;
     margin: 16px 0;
 }
 

@@ -71,18 +71,34 @@ function Anchor({ item }: { item: string }) {
   return <a href={`#${item.toLowerCase().replaceAll(" ", "-")}`}>{item}</a>
 }
 const dealersData = [
-  { name: "Aurelia Estates International", type: "Sales Partner", location: "Gulberg III, Lahore", description: "Virtual Reality Private Tours & AI Valuations: Specializes in high-net-worth foreign buyers and overseas Pakistanis by offering live, guided 8K VR walkthroughs and algorithmic yield predictions for early-stage off-plan investments.", logo: "/Aurelia Estates International.svg" },
-  { name: "Vanguard Capital Real Estate", type: "Sales Partner", location: "DHA Phase 6, Lahore", description: "Bespoke Portfolio Structuring: Focuses on institutional investors and commercial buyers, providing customized land-swap models and automated quarterly dividend tracking for high-density plots.", logo: "/Vanguard Capital Real Estate.svg" },
-  { name: "Mirage Luxury Partners", type: "Sales Partner", location: "E-11, Islamabad", description: "Concierge Interior & Architectural Customization: Partners directly with European interior designers, allowing residential buyers to select turnkey architectural customization packages right at the point of plot purchase.", logo: "/Mirage Luxury Partners.svg" },
-  { name: "Pinnacle Property Group", type: "Sales Partner", location: "Multan, Pakistan", description: "Premier real estate solutions specializing in investment portfolios and residential developments across central Pakistan.", logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%234A90E2' width='100' height='100'/%3E%3Cpath fill='white' d='M50 15L85 40v45H15V40L50 15M50 25L30 40v35h40V40L50 25'/%3E%3C/svg%3E" },
-  { name: "Nexus Realty Ventures", type: "Sales Partner", location: "Faisalabad, Pakistan", description: "Innovative real estate platform connecting buyers and investors with premium property opportunities across Punjab.", logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23E74C3C' width='100' height='100'/%3E%3Ccircle cx='50' cy='50' r='25' fill='white'/%3E%3Crect x='42' y='35' width='16' height='30' fill='%23E74C3C'/%3E%3C/svg%3E" },
-  { name: "Elite Land Consultants", type: "Sales Partner", location: "Peshawar, Pakistan", description: "Specialized advisors providing expert guidance on property investments and market analysis in Northern regions.", logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%2327AE60' width='100' height='100'/%3E%3Cpath fill='white' d='M50 20L70 35L65 60L50 75L35 60L30 35L50 20'/%3E%3C/svg%3E" },
-  { name: "Partner Name 7", type: "Sales Partner", location: "Rawalpindi, Pakistan", description: "Authorized sales partner committed to excellence in property consultation and support." },
-  { name: "Partner Name 8", type: "Sales Partner", location: "Sialkot, Pakistan", description: "Professional dealer offering tailored solutions for residential and commercial investments." },
-  { name: "Partner Name 9", type: "Sales Partner", location: "Gujranwala, Pakistan", description: "Experienced property consultant dedicated to client satisfaction and market expertise." },
-  { name: "Partner Name 10", type: "Sales Partner", location: "Hyderabad, Pakistan", description: "Trusted partner providing comprehensive property guidance and investment support." },
-  { name: "Partner Name 11", type: "Sales Partner", location: "Quetta, Pakistan", description: "Authorized dealer serving clients with professional property advisory services." },
-  { name: "Partner Name 12", type: "Sales Partner", location: "Sukkur, Pakistan", description: "Dedicated real estate professional with commitment to client success and satisfaction." },
+  {
+    name: "NATIONAL MARKETING REAL ESTATE & BUILDERS",
+    type: "Authorized Sales Partner",
+    location: "Lahore, Pakistan",
+    description: "Authorized sales and marketing partner for Royal Swiss City, providing specialized real estate consultation, investment portfolio management, and premier residential and commercial opportunities.",
+    logo: "/NATIONAL MARKETING REAL ESTATE & BUILDERS.jpg"
+  },
+  {
+    name: "WALL.PK",
+    type: "Authorized Sales Partner",
+    location: "Lahore, Pakistan",
+    description: "Leading digital real estate network and authorized sales partner offering innovative marketing, transparent property advisory, and high-yield investment options at Royal Swiss City.",
+    logo: "/WALL.PK.jpg"
+  },
+  {
+    name: "REHMAN PROPERTIES & MARKETING",
+    type: "Authorized Sales Partner",
+    location: "Lahore, Pakistan",
+    description: "Trusted real estate and marketing experts delivering bespoke property guidance, reliable plot bookings, and strategic investor support across Royal Swiss City.",
+    logo: "/REHMAN PROPERTIES & MARKETING.jpg"
+  },
+  {
+    name: "BURHAN REAL ESTATE",
+    type: "Authorized Sales Partner",
+    location: "Lahore, Pakistan",
+    description: "Distinguished property consultants committed to excellence, assisting clients and investors with premier residential and commercial plots at Royal Swiss City.",
+    logo: "/BURHAN REAL ESTATE.jpg"
+  }
 ];
 
 export default function Home() {
@@ -623,7 +639,7 @@ export default function Home() {
     </section>
 
     {!isMobile && (
-      <section id="partner" className="partner-strip reveal-section" style={{ backgroundPosition: "center -150px" }}>
+      <section id="partner" className="partner-strip reveal-section" style={{ backgroundColor: "#FAFAFA", backgroundPosition: "center -150px" }}>
         {/* Top Row: Picture on Left, Text on Right aligned in a straight line */}
         <div style={{ display: "grid", gridTemplateColumns: "38% 1fr", gap: "clamp(36px, 5vw, 68px)", width: "100%", maxWidth: "1160px", alignItems: "center", margin: "0 auto 50px" }}>
           <div style={{ width: "100%", borderRadius: "8px", overflow: "hidden", boxShadow: "0 10px 30px rgba(0,0,0,0.15)" }}>
@@ -654,48 +670,30 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bottom: 6 Authorized Dealers Centered Under Both Picture and Text */}
+        {/* Bottom: 4 Authorized Dealers Centered Under Both Picture and Text */}
         <div style={{ width: "100%", maxWidth: "1160px", margin: "0 auto", textAlign: "center" }}>
-          <h3 style={{ fontSize: "16px", fontWeight: 500, letterSpacing: "2px", textTransform: "uppercase", marginBottom: "30px", color: "#1a3a52", textAlign: "center" }}>
+          <h3 className="partner-section-subtitle">
             AUTHORIZED DEALERS & SALES PARTNERS
           </h3>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "18px", marginBottom: "40px" }}>
-            {dealersData.slice(0, 6).map((dealer, i) => (
+          <div className="partner-cards-grid">
+            {dealersData.slice(0, 4).map((dealer, i) => (
               <div 
                 key={i} 
-                onClick={() => setSelectedDealer(dealer)} 
-                style={{ 
-                  background: "rgba(255, 255, 255, 0.15)", 
-                  backdropFilter: "blur(10px)", 
-                  padding: "18px 16px", 
-                  borderRadius: "12px", 
-                  border: "1px solid rgba(26, 58, 82, 0.3)", 
-                  textAlign: "center", 
-                  cursor: "pointer", 
-                  transition: "all 0.3s ease", 
-                  position: "relative" 
-                }} 
-                onMouseEnter={(e) => { 
-                  (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 24px rgba(26, 58, 82, 0.2)"; 
-                  (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)"; 
-                  (e.currentTarget as HTMLElement).style.background = "rgba(255, 255, 255, 0.25)"; 
-                }} 
-                onMouseLeave={(e) => { 
-                  (e.currentTarget as HTMLElement).style.boxShadow = "none"; 
-                  (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; 
-                  (e.currentTarget as HTMLElement).style.background = "rgba(255, 255, 255, 0.15)"; 
-                }}
+                className="partner-card"
+                onClick={() => setSelectedDealer(dealer)}
               >
-                <div style={{ width: "50px", height: "50px", background: "rgba(26, 58, 82, 0.2)", borderRadius: "6px", margin: "0 auto 10px", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+                <div className="partner-card-logo-wrap">
                   {dealer.logo ? (
-                    <img src={dealer.logo} alt={dealer.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} loading="lazy" />
+                    <img src={dealer.logo} alt={dealer.name} loading="lazy" />
                   ) : (
                     <span style={{ fontSize: "10px", color: "#1a3a52" }}>Logo</span>
                   )}
                 </div>
-                <p style={{ fontSize: "12px", fontWeight: 600, color: "#1a3a52", margin: "0 0 4px 0", lineHeight: 1.2 }}>{dealer.name}</p>
-                <p style={{ fontSize: "9px", color: "#1a3a52", margin: "0 0 8px 0" }}>{dealer.type}</p>
-                <p style={{ fontSize: "8px", color: "#1a3a52", margin: "0", fontStyle: "italic" }}>TAP FOR MORE</p>
+                <div className="partner-card-info">
+                  <div className="partner-card-name">{dealer.name}</div>
+                  <div className="partner-card-type">{dealer.type}</div>
+                </div>
+                <div className="partner-card-badge">TAP FOR MORE</div>
               </div>
             ))}
           </div>
@@ -704,24 +702,34 @@ export default function Home() {
     )}
 
     {isMobile && (
-      <section id="partner" className="partner-strip" style={{ backgroundPosition: "center -150px", marginTop: "300px" }}>
+      <section id="partner" className="partner-strip" style={{ backgroundColor: "#FAFAFA", backgroundPosition: "center -150px", marginTop: "300px" }}>
         <img src={img.partnership} alt="Royal Swiss City Partnership Network - Sales Partners and Dealers" style={{ marginTop: "-370px", width: "100%", height: "auto" }} loading="lazy" />
         <div>
           <p className="section-kicker" style={{ color: "#1a3a52" }}>PARTNERSHIP</p>
           <h2 style={{ color: "#1a3a52", fontFamily: "var(--serif)", fontSize: "clamp(32px, 4vw, 55px)", fontWeight: 300, lineHeight: 0.9, margin: "0 0 24px" }}>PARTNER WITH US<br /></h2>
           <p style={{ color: "#1a3a52" }}>Join the Royal Swiss City partner network and help your clients find a place they'll be proud to call home. We'll give you the tools, support, and information you need to guide them with confidence.</p>
           <a className="outline-cta" href="/enquire" style={{ transition: "all 0.3s ease", background: "#1a3a52", color: "#fff", borderColor: "#1a3a52" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.opacity = "0.7"; (e.target as HTMLElement).style.transform = "translateY(-2px)"; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.opacity = "1"; (e.target as HTMLElement).style.transform = "translateY(0)"; }}>APPLY FOR PARTNERSHIP</a>
-          <div style={{ marginTop: "60px" }}>
-            <h3 style={{ fontSize: "16px", fontWeight: 500, letterSpacing: "2px", textTransform: "uppercase", marginBottom: "30px", color: "#1a3a52" }}>AUTHORIZED DEALERS & SALES PARTNERS</h3>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px", marginBottom: "40px" }}>
-              {dealersData.slice(0, 6).map((dealer, i) => (
-                <div key={i} onClick={() => setSelectedDealer(dealer)} style={{ background: "rgba(255, 255, 255, 0.15)", backdropFilter: "blur(10px)", padding: "12px", borderRadius: "12px", border: "1px solid rgba(26, 58, 82, 0.3)", textAlign: "center", cursor: "pointer", transition: "all 0.3s ease", position: "relative" }} onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 24px rgba(26, 58, 82, 0.2)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)"; (e.currentTarget as HTMLElement).style.background = "rgba(255, 255, 255, 0.25)"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = "none"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.background = "rgba(255, 255, 255, 0.15)"; }}>
-                  <div style={{ width: "40px", height: "40px", background: "rgba(26, 58, 82, 0.2)", borderRadius: "6px", margin: "0 auto 8px", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-                    {dealer.logo ? <img src={dealer.logo} alt={dealer.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} loading="lazy" /> : <span style={{ fontSize: "10px", color: "#1a3a52" }}>Logo</span>}
+          <div style={{ marginTop: "40px" }}>
+            <h3 className="partner-section-subtitle">AUTHORIZED DEALERS & SALES PARTNERS</h3>
+            <div className="partner-cards-grid">
+              {dealersData.slice(0, 4).map((dealer, i) => (
+                <div 
+                  key={i} 
+                  className="partner-card"
+                  onClick={() => setSelectedDealer(dealer)}
+                >
+                  <div className="partner-card-logo-wrap">
+                    {dealer.logo ? (
+                      <img src={dealer.logo} alt={dealer.name} loading="lazy" />
+                    ) : (
+                      <span style={{ fontSize: "9px", color: "#1a3a52" }}>Logo</span>
+                    )}
                   </div>
-                  <p style={{ fontSize: "10px", fontWeight: 500, color: "#1a3a52", margin: "0 0 4px 0", lineHeight: 1.2 }}>{dealer.name}</p>
-                  <p style={{ fontSize: "8px", color: "#1a3a52", margin: "0 0 8px 0" }}>{dealer.type}</p>
-                  <p style={{ fontSize: "7px", color: "#1a3a52", margin: "0", fontStyle: "italic", display: "none" }}>TAP FOR MORE</p>
+                  <div className="partner-card-info">
+                    <div className="partner-card-name">{dealer.name}</div>
+                    <div className="partner-card-type">{dealer.type}</div>
+                  </div>
+                  <div className="partner-card-badge">TAP FOR MORE</div>
                 </div>
               ))}
             </div>
@@ -767,16 +775,30 @@ export default function Home() {
     {selectedDealer && (
       <div className="dealer-modal-overlay" onClick={() => setSelectedDealer(null)}>
         <div className="dealer-modal" onClick={(e) => e.stopPropagation()}>
-          <button className="modal-close" onClick={() => setSelectedDealer(null)} style={{ background: "transparent", border: "none", padding: "8px", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", color: "#d4b896", transition: "all 0.3s ease", position: "absolute", top: "16px", right: "16px" }}><X size={24} /></button>
+          <button className="modal-close" onClick={() => setSelectedDealer(null)} aria-label="Close modal">
+            <X size={20} />
+          </button>
           <div className="modal-content">
-            <div style={{ width: "100px", height: "100px", background: "rgba(212, 184, 150, 0.2)", borderRadius: "12px", margin: "0 auto 24px", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>{selectedDealer.logo ? <img src={selectedDealer.logo} alt={selectedDealer.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} loading="lazy" /> : <span style={{ fontSize: "14px", color: "#d4b896" }}>Logo</span>}</div>
-            <h2 style={{ color: "#d4b896", fontSize: "24px", fontWeight: 600, margin: "16px 0 8px 0" }}>{selectedDealer.name}</h2>
+            <div style={{ width: "110px", height: "110px", background: "#fff", borderRadius: "12px", margin: "0 auto 20px", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", padding: "10px", border: "1px solid rgba(143, 111, 50, 0.25)", boxShadow: "0 4px 16px rgba(0,0,0,0.06)" }}>
+              {selectedDealer.logo ? (
+                <img src={selectedDealer.logo} alt={selectedDealer.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} loading="lazy" />
+              ) : (
+                <span style={{ fontSize: "14px", color: "#8f6f32" }}>Logo</span>
+              )}
+            </div>
+            <h2 style={{ color: "#8f6f32", fontSize: "22px", fontWeight: 700, margin: "16px 0 8px 0", lineHeight: 1.3 }}>{selectedDealer.name}</h2>
             <p className="modal-type">{selectedDealer.type}</p>
             <p className="modal-location">{selectedDealer.location}</p>
             <p className="modal-description">{selectedDealer.description}</p>
-            <div style={{ marginTop: "24px", display: "flex", gap: "12px", flexDirection: "column" }}>
-              <a href="tel:+9242111777588" style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "#d4b896", fontSize: "12px", textDecoration: "none", fontWeight: 500, transition: "all 0.3s ease" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.opacity = "0.7"; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.opacity = "1"; }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>042 111 777 588</a>
-              <a href="mailto:royalswisscity@gmail.com" style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "#d4b896", fontSize: "12px", textDecoration: "none", fontWeight: 500, transition: "all 0.3s ease" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.opacity = "0.7"; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.opacity = "1"; }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>royalswisscity@gmail.com</a>
+            <div style={{ marginTop: "24px", display: "flex", gap: "12px", flexDirection: "column", alignItems: "center" }}>
+              <a href="tel:+9242111777588" style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "#8f6f32", fontSize: "13px", textDecoration: "none", fontWeight: 600, transition: "all 0.3s ease" }} onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = "0.75"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = "1"; }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                042 111 777 588
+              </a>
+              <a href="mailto:royalswisscity@gmail.com" style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "#8f6f32", fontSize: "13px", textDecoration: "none", fontWeight: 600, transition: "all 0.3s ease" }} onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = "0.75"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = "1"; }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+                royalswisscity@gmail.com
+              </a>
             </div>
           </div>
         </div>

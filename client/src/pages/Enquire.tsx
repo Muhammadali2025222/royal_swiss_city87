@@ -247,7 +247,7 @@ export default function Enquire() {
               marginBottom: "16px" 
             }}
           >
-            DIRECT SALES & PRIVATE ADVISORY
+            DIRECT SALES & ADVISORY
           </span>
           
           <h2 
@@ -261,7 +261,7 @@ export default function Enquire() {
               margin: "0 0 20px" 
             }}
           >
-            Connect With Our <span style={{ color: "#b2996a" }}>Private Client Team</span>
+            Connect With Our <span style={{ color: "#b2996a" }}>Team</span>
           </h2>
           
           <p 
@@ -275,7 +275,7 @@ export default function Enquire() {
               fontWeight: 300 
             }}
           >
-            Whether you are exploring residential plots, prime commercial boulevards, or dealer partnerships, our senior advisory desk offers confidential guidance and verified inventory details.
+            Whether you are exploring residential plots, prime commercial boulevards, or dealer partnerships, we offer confidential guidance and verified details.
           </p>
         </div>
       </section>
@@ -283,17 +283,17 @@ export default function Enquire() {
       {/* QUICK HIGHLIGHT / TRUST STRIP */}
       <section 
         style={{ 
-          background: "linear-gradient(135deg, #f7f4ed 0%, #ebe5d8 100%)", 
-          borderBottom: "1px solid rgba(178,153,106,0.25)", 
+          background: "#F7F7F7", 
+          borderBottom: "1px solid rgba(178,153,106,0.2)", 
           padding: "24px 20px" 
         }}
       >
         <div 
           style={{ 
-            maxWidth: "1200px", 
+            maxWidth: "880px", 
             margin: "0 auto", 
             display: "grid", 
-            gridTemplateColumns: isMobile ? "repeat(2, 1fr)" : "repeat(4, 1fr)", 
+            gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)", 
             gap: "20px", 
             textAlign: "center" 
           }}
@@ -307,167 +307,25 @@ export default function Enquire() {
           </div>
 
           <div style={{ display: "flex", alignItems: "center", justifyContent: isMobile ? "flex-start" : "center", gap: "10px" }}>
-            <ShieldCheck size={22} color="#b2996a" style={{ flexShrink: 0 }} />
-            <div style={{ textAlign: "left" }}>
-              <p style={{ margin: 0, fontSize: "12px", fontWeight: 700, color: "#1a3a52", fontFamily: "var(--serif)" }}>100% SECURE TITLE</p>
-              <p style={{ margin: 0, fontSize: "11px", color: "#6c665e" }}>Direct Developer Registry</p>
-            </div>
-          </div>
-
-          <div style={{ display: "flex", alignItems: "center", justifyContent: isMobile ? "flex-start" : "center", gap: "10px" }}>
             <Clock size={22} color="#b2996a" style={{ flexShrink: 0 }} />
             <div style={{ textAlign: "left" }}>
               <p style={{ margin: 0, fontSize: "12px", fontWeight: 700, color: "#1a3a52", fontFamily: "var(--serif)" }}>24-HOUR RESPONSE</p>
               <p style={{ margin: 0, fontSize: "11px", color: "#6c665e" }}>Dedicated Property Advisor</p>
             </div>
           </div>
-
-          <div style={{ display: "flex", alignItems: "center", justifyContent: isMobile ? "flex-start" : "center", gap: "10px" }}>
-            <MessageSquare size={22} color="#b2996a" style={{ flexShrink: 0 }} />
-            <div style={{ textAlign: "left" }}>
-              <p style={{ margin: 0, fontSize: "12px", fontWeight: 700, color: "#1a3a52", fontFamily: "var(--serif)" }}>OVERSEAS DESK</p>
-              <p style={{ margin: 0, fontSize: "11px", color: "#6c665e" }}>Direct WhatsApp Concierge</p>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* MAIN FORM & CONTACT DETAILS SECTION */}
-      <section style={{ backgroundColor: "#faf8f5", padding: isMobile ? "40px 16px 80px" : "70px 30px 100px", minHeight: "700px" }}>
-        <div style={{ maxWidth: "1240px", margin: "0 auto", display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1.3fr", gap: isMobile ? "32px" : "48px", alignItems: "start" }}>
+      <section style={{ backgroundColor: "#F7F7F7", padding: isMobile ? "40px 16px 80px" : "70px 30px 100px", minHeight: "700px" }}>
+        <div style={{ maxWidth: "880px", margin: "0 auto", display: "flex", flexDirection: "column", gap: isMobile ? "32px" : "44px" }}>
           
-          {/* LEFT SIDE - CONTACT DETAILS & QUICK DIRECT CHANNELS */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-            
-            {/* Direct Contact Card */}
-            <div 
-              style={{
-                background: "#ffffff",
-                borderRadius: "16px",
-                padding: isMobile ? "28px 20px" : "36px",
-                border: "1px solid rgba(178, 153, 106, 0.28)",
-                boxShadow: "0 10px 30px rgba(26, 58, 82, 0.05)"
-              }}
-            >
-              <span style={{ fontSize: "11px", letterSpacing: "2px", textTransform: "uppercase", color: "#b2996a", fontWeight: 600, display: "block", marginBottom: "10px" }}>
-                HEAD OFFICE & ADVISORY
-              </span>
-              <h3 style={{ fontFamily: "var(--serif)", fontSize: "24px", color: "#1a3a52", fontWeight: 400, margin: "0 0 16px" }}>
-                Speak With an Advisor
-              </h3>
-              <p style={{ fontSize: "14px", lineHeight: 1.7, color: "#6c665e", margin: "0 0 28px", fontFamily: "var(--serif)" }}>
-                Our corporate advisory desk is open to assist you with floor plans, payment schedules, site visits, and remote overseas bookings.
-              </p>
-
-              <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-                {/* Phone */}
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
-                  <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(178, 153, 106, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <Phone size={18} color="#b2996a" />
-                  </div>
-                  <div>
-                    <span style={{ fontSize: "10px", letterSpacing: "1.5px", textTransform: "uppercase", color: "#8B6F47", fontWeight: 600, display: "block", marginBottom: "2px" }}>PHONE UAN</span>
-                    <a href="tel:+9242111777588" style={{ fontSize: "15px", fontWeight: 600, color: "#1a3a52", textDecoration: "none" }}>042 111 777 588</a>
-                  </div>
-                </div>
-
-                {/* Email */}
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
-                  <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(178, 153, 106, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <Mail size={18} color="#b2996a" />
-                  </div>
-                  <div>
-                    <span style={{ fontSize: "10px", letterSpacing: "1.5px", textTransform: "uppercase", color: "#8B6F47", fontWeight: 600, display: "block", marginBottom: "2px" }}>EMAIL INQUIRIES</span>
-                    <a href="mailto:royalswisscity@gmail.com" style={{ fontSize: "15px", fontWeight: 500, color: "#1a3a52", textDecoration: "none" }}>royalswisscity@gmail.com</a>
-                  </div>
-                </div>
-
-                {/* Location */}
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
-                  <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(178, 153, 106, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <MapPin size={18} color="#b2996a" />
-                  </div>
-                  <div>
-                    <span style={{ fontSize: "10px", letterSpacing: "1.5px", textTransform: "uppercase", color: "#8B6F47", fontWeight: 600, display: "block", marginBottom: "2px" }}>CORPORATE OFFICE</span>
-                    <p style={{ fontSize: "14px", color: "#1a3a52", margin: 0, lineHeight: 1.5 }}>123-C Commercial Broadway, DHA Phase 5, Lahore, Pakistan</p>
-                  </div>
-                </div>
-
-                {/* Hours */}
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
-                  <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(178, 153, 106, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <Clock size={18} color="#b2996a" />
-                  </div>
-                  <div>
-                    <span style={{ fontSize: "10px", letterSpacing: "1.5px", textTransform: "uppercase", color: "#8B6F47", fontWeight: 600, display: "block", marginBottom: "2px" }}>BUSINESS HOURS</span>
-                    <p style={{ fontSize: "14px", color: "#1a3a52", margin: 0 }}>Monday – Saturday: 9:00 AM – 6:00 PM (PKT)</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Direct WhatsApp Quick Contact */}
-              <div style={{ marginTop: "32px", paddingTop: "24px", borderTop: "1px solid rgba(26, 58, 82, 0.08)" }}>
-                <a 
-                  href="https://wa.me/923004647979" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "10px",
-                    width: "100%",
-                    padding: "14px 20px",
-                    background: "#25D366",
-                    color: "#ffffff",
-                    borderRadius: "999px",
-                    textDecoration: "none",
-                    fontWeight: 600,
-                    fontSize: "12px",
-                    letterSpacing: "1.5px",
-                    textTransform: "uppercase",
-                    boxShadow: "0 4px 16px rgba(37, 211, 102, 0.25)",
-                    transition: "all 0.3s ease",
-                    boxSizing: "border-box"
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-2px)"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; }}
-                >
-                  <MessageSquare size={16} /> Instant WhatsApp Support
-                </a>
-              </div>
-            </div>
-
-            {/* Developer Trust Badge Card */}
-            <div 
-              style={{
-                background: "linear-gradient(135deg, #1a3a52 0%, #0d1b2a 100%)",
-                borderRadius: "16px",
-                padding: "28px 24px",
-                color: "#ffffff",
-                border: "1px solid rgba(178, 153, 106, 0.35)"
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
-                <ShieldCheck size={20} color="#b2996a" />
-                <span style={{ fontSize: "11px", letterSpacing: "2px", textTransform: "uppercase", color: "#b2996a", fontWeight: 600 }}>INSTITUTIONAL INTEGRITY</span>
-              </div>
-              <h4 style={{ fontFamily: "var(--serif)", fontSize: "18px", fontWeight: 300, margin: "0 0 8px" }}>
-                Habib Rafiq Construction (Pvt.) Ltd.
-              </h4>
-              <p style={{ fontSize: "13px", lineHeight: 1.6, color: "rgba(255, 255, 255, 0.8)", margin: 0 }}>
-                Direct developer allocation guarantees zero intermediary fee overheads, transparent installment schedules, and fully registered title deeds.
-              </p>
-            </div>
-
-          </div>
-
-          {/* RIGHT SIDE - LUXURY ENQUIRY FORM */}
+          {/* SEND US A MESSAGE - LUXURY ENQUIRY FORM */}
           <div 
             style={{
               background: "#ffffff",
               borderRadius: "16px",
-              padding: isMobile ? "28px 20px" : "40px",
+              padding: isMobile ? "28px 20px" : "44px 48px",
               border: "1px solid rgba(178, 153, 106, 0.28)",
               boxShadow: "0 16px 40px rgba(13, 27, 42, 0.07)"
             }}
@@ -820,12 +678,79 @@ export default function Enquire() {
               >
                 {isSubmitting ? "SUBMITTING INQUIRY..." : <><Send size={15} /> SUBMIT ENQUIRY →</>}
               </button>
-
-              <p style={{ fontSize: "12px", color: "#8a8377", margin: "4px 0 0 0", textAlign: "center", display: "flex", alignItems: "center", justifyContent: "center", gap: "6px" }}>
-                <ShieldCheck size={14} color="#b2996a" />
-                All information is held in strict institutional confidence and never shared with third parties.
-              </p>
             </form>
+          </div>
+
+          {/* HEAD OFFICE & ADVISORY SECTION (SHIFTED UNDER SEND US A MESSAGE) */}
+          <div 
+            style={{
+              background: "#ffffff",
+              borderRadius: "16px",
+              padding: isMobile ? "28px 20px" : "36px 44px",
+              border: "1px solid rgba(178, 153, 106, 0.28)",
+              boxShadow: "0 10px 30px rgba(26, 58, 82, 0.05)"
+            }}
+          >
+            <div style={{ marginBottom: "20px" }}>
+              <span style={{ fontSize: "11px", letterSpacing: "2px", textTransform: "uppercase", color: "#b2996a", fontWeight: 600, display: "block", marginBottom: "8px" }}>
+                HEAD OFFICE & ADVISORY
+              </span>
+              <h3 style={{ fontFamily: "var(--serif)", fontSize: "24px", color: "#1a3a52", fontWeight: 400, margin: 0 }}>
+                Speak With an Advisor
+              </h3>
+            </div>
+
+            <div style={{ 
+              display: "grid", 
+              gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)", 
+              gap: isMobile ? "20px" : "24px 32px",
+              paddingTop: "24px",
+              borderTop: "1px solid rgba(178, 153, 106, 0.18)"
+            }}>
+              {/* Phone */}
+              <div style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
+                <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(178, 153, 106, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <Phone size={18} color="#b2996a" />
+                </div>
+                <div>
+                  <span style={{ fontSize: "10px", letterSpacing: "1.5px", textTransform: "uppercase", color: "#8B6F47", fontWeight: 600, display: "block", marginBottom: "2px" }}>PHONE UAN</span>
+                  <a href="tel:+9242111777588" style={{ fontSize: "15px", fontWeight: 600, color: "#1a3a52", textDecoration: "none" }}>042 111 777 588</a>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
+                <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(178, 153, 106, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <Mail size={18} color="#b2996a" />
+                </div>
+                <div>
+                  <span style={{ fontSize: "10px", letterSpacing: "1.5px", textTransform: "uppercase", color: "#8B6F47", fontWeight: 600, display: "block", marginBottom: "2px" }}>EMAIL INQUIRIES</span>
+                  <a href="mailto:admin@royalswisscity.com" style={{ fontSize: "15px", fontWeight: 500, color: "#1a3a52", textDecoration: "none" }}>admin@royalswisscity.com</a>
+                </div>
+              </div>
+
+              {/* Location */}
+              <div style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
+                <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(178, 153, 106, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <MapPin size={18} color="#b2996a" />
+                </div>
+                <div>
+                  <span style={{ fontSize: "10px", letterSpacing: "1.5px", textTransform: "uppercase", color: "#8B6F47", fontWeight: 600, display: "block", marginBottom: "2px" }}>CORPORATE OFFICE</span>
+                  <p style={{ fontSize: "14px", color: "#1a3a52", margin: 0, lineHeight: 1.5 }}>123-C Commercial Broadway, DHA Phase 5, Lahore, Pakistan</p>
+                </div>
+              </div>
+
+              {/* Hours */}
+              <div style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
+                <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(178, 153, 106, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <Clock size={18} color="#b2996a" />
+                </div>
+                <div>
+                  <span style={{ fontSize: "10px", letterSpacing: "1.5px", textTransform: "uppercase", color: "#8B6F47", fontWeight: 600, display: "block", marginBottom: "2px" }}>BUSINESS HOURS</span>
+                  <p style={{ fontSize: "14px", color: "#1a3a52", margin: 0 }}>Monday – Saturday: 9:00 AM – 6:00 PM (PKT)</p>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>

@@ -114,9 +114,9 @@ export default function TheCity() {
             <img className="brand-logo" src={img.logo} alt="Royal Swiss City" style={{ height: "60px", width: "auto" }} loading="lazy" />
           </div>
         )}
-        <div style={{ position: "absolute", left: isMobile ? "50%" : "40px", transform: isMobile ? "translateX(-50%)" : "none", bottom: isMobile ? "40px" : "auto", top: isMobile ? "auto" : "40%", color: "white", zIndex: 10, textAlign: isMobile ? "center" : "left" }}>
-          <span style={{ fontSize: isMobile ? "0.75rem" : "0.9rem", fontWeight: isMobile ? 400 : 300, margin: "0 0 15px 0", fontFamily: "var(--serif)", letterSpacing: "0.08em", color: "#b2996a", display: "block" }}>ROYAL SWISS CITY LAHORE</span>
-          <h2 style={{ fontSize: isMobile ? "2.5rem" : "3.5rem", fontWeight: isMobile ? 600 : 500, margin: "0", fontFamily: "var(--serif)", letterSpacing: "-0.06em", lineHeight: 1.1 }}>A City Immersed<br /><span style={{ color: "#b2996a" }}>In Nature</span></h2>
+        <div style={{ position: "absolute", left: isMobile ? "50%" : "60px", transform: isMobile ? "translateX(-50%)" : "none", bottom: isMobile ? "40px" : "auto", top: isMobile ? "auto" : "36%", color: "white", zIndex: 10, textAlign: isMobile ? "center" : "left", width: isMobile ? "90%" : "auto" }}>
+          <span className="the-city-hero-kicker" style={{ fontSize: isMobile ? "1.05rem" : "1.25rem", fontWeight: isMobile ? 500 : 600, margin: "0 0 16px 0", letterSpacing: "0.14em", color: "#b2996a", display: "block", textTransform: "uppercase" }}>ROYAL SWISS CITY LAHORE</span>
+          <h2 className="the-city-hero-title" style={{ fontSize: isMobile ? "clamp(2.8rem, 8vw, 3.4rem)" : "clamp(4.2rem, 5.5vw, 5rem)", fontWeight: 700, margin: "0", letterSpacing: "-0.04em", lineHeight: 1.08 }}>A City Immersed<br /><span style={{ color: "#b2996a" }}>In Nature</span></h2>
         </div>
         <div style={{ position: "absolute", right: "60px", top: "45%", transform: "translateY(-50%)", color: "white", zIndex: 10, textAlign: "right" }}>
         </div>
@@ -147,7 +147,7 @@ export default function TheCity() {
       </div>
 
       {/* WORLD CLASS AMENITIES SECTION */}
-      <section style={{ padding: isMobile ? "40px 20px" : "80px 40px", background: "#ffffff" }}>
+      <section style={{ padding: isMobile ? "40px 20px" : "80px 40px", background: "#F7F7F7" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           {/* Section Header with Left Title and Right Body Text */}
           <div style={{ display: "flex", gap: isMobile ? "16px" : "60px", marginBottom: isMobile ? "30px" : "60px", alignItems: isMobile ? "flex-start" : "flex-end", flexDirection: isMobile ? "column" : "row" }}>
@@ -205,7 +205,7 @@ export default function TheCity() {
       </section>
 
       {/* MODERN INFRASTRUCTURE SECTION */}
-      <section style={{ padding: isMobile ? "40px 20px" : "80px 40px", background: "#ffffff" }}>
+      <section style={{ padding: isMobile ? "40px 20px" : "80px 40px", background: "#F7F7F7" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto", display: "flex", gap: isMobile ? "30px" : "60px", alignItems: "flex-start", flexDirection: isMobile ? "column" : "row" }}>
           {/* Left Side - Text */}
           <div style={{ flex: 1, minWidth: "0" }}>
@@ -244,7 +244,7 @@ export default function TheCity() {
       </section>
 
       {/* SUSTAINABILITY SECTION */}
-      <section style={{ position: "relative", height: window.innerWidth <= 768 ? "90vh" : "70vh", overflow: "hidden", background: "#ffffff" }}>
+      <section style={{ position: "relative", height: window.innerWidth <= 768 ? "90vh" : "70vh", overflow: "hidden", background: "#F7F7F7" }}>
         {/* Full Background Image */}
         <img src={window.innerWidth <= 768 ? "/green_canal_mobile.webp" : "/green_canal_landscape.webp"} alt="Green Landscape" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", zIndex: 1 }} loading="lazy" />
         

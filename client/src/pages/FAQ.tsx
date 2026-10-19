@@ -601,8 +601,8 @@ export default function FAQ() {
       {/* QUICK HIGHLIGHT STRIP */}
       <section 
         style={{ 
-          background: "linear-gradient(135deg, #f7f4ed 0%, #ebe5d8 100%)", 
-          borderBottom: "1px solid rgba(178,153,106,0.25)", 
+          background: "#F7F7F7", 
+          borderBottom: "1px solid rgba(178,153,106,0.2)", 
           padding: "24px 20px" 
         }}
       >
@@ -651,7 +651,7 @@ export default function FAQ() {
       </section>
 
       {/* MAIN Q&A INTERFACE */}
-      <section style={{ backgroundColor: "#faf8f5", padding: "60px 20px 100px", minHeight: "600px" }}>
+      <section style={{ backgroundColor: "#F7F7F7", padding: "60px 20px 100px", minHeight: "600px" }}>
         <div style={{ maxWidth: "1080px", margin: "0 auto" }}>
 
           {/* Category Filter Pills */}

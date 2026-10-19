@@ -350,6 +350,7 @@ export function HeroCapsuleAnimation() {
               }}
             >
               <h2
+                className="hero-capsule-heading"
                 style={{
                   fontSize: "calc(clamp(1.5rem, 3vw, 2rem) + 15px)",
                   fontWeight: 400,
@@ -357,7 +358,7 @@ export function HeroCapsuleAnimation() {
                   marginBottom: "22px",
                   color: "#ffffff",
                   lineHeight: 1.1,
-                  fontFamily: "var(--serif)",
+                  fontFamily: '"Cormorant Garamond", Georgia, serif !important',
                 }}
               >
                 Where{" "}
@@ -369,6 +370,7 @@ export function HeroCapsuleAnimation() {
                     color: "#b2996a",
                     fontSize: "calc(1em + 30px)",
                     verticalAlign: "baseline",
+                    fontFamily: '"Cormorant Garamond", Georgia, serif !important',
                   }}
                 >
                   Life
@@ -468,12 +470,13 @@ export function HeroCapsuleAnimation() {
               }}
             >
               <h2
+                className="hero-capsule-heading"
                 style={{
                   fontSize: "clamp(1.75rem, 7vw, 2.75rem)",
                   marginBottom: "24px",
                   color: "#ffffff",
                   letterSpacing: "-0.04em",
-                  fontFamily: "var(--serif)",
+                  fontFamily: '"Cormorant Garamond", Georgia, serif !important',
                   fontWeight: 300,
                 }}
               >
@@ -486,6 +489,7 @@ export function HeroCapsuleAnimation() {
                     color: "#b2996a",
                     fontSize: "calc(1em + clamp(14px, 3.5vw, 24px))",
                     verticalAlign: "baseline",
+                    fontFamily: '"Cormorant Garamond", Georgia, serif !important',
                   }}
                 >
                   Life
